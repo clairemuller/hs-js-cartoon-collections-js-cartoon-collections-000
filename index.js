@@ -1,6 +1,6 @@
 function dwarfRollCall(dwarves) {
   var string = "";
-  for (let i = 0; i < dwarves.length; i++) {
+  for (let i = dwarves.length / 2; i < dwarves.length; i++) {
     string += (`${i + 1}. ${dwarves[i]} `);
   }
   return string;
@@ -31,8 +31,30 @@ function findTheCheese (foods) {
       return foods[i];
     } else if (foods[i] === "camembert") {
       return foods[i];
+    } else if (foods[i] === "swiss") {
+      return foods[i];
     }
   }
   return 'no cheese!';
 }
+
+
+function startsWithB(words){
+  var arr = [];
+  
+  for (i = 0; i < words.length; i++) {
+    if (words[i].startsWith('b')) {
+      arr.push(words[i]);
+    }
+  }
+  
+  return arr;
+}
+
+"alice".startsWith("b") // false
+"bob".startsWith("b") // true
+
+startsWithB(['brian', 'cody', 'cher']) // [ 'brian']
+startsWithB(['banana', 'berry', 'cherry']) // [ 'banana', 'berry']
+startsWithB(['chase', 'race', 'ace']) // []
 
